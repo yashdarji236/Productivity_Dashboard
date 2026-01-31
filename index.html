@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./apple-touch-icon.png" type="image/x-icon">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <nav>
+            <h1>
+                Productivity Dashboard
+            </h1>
+            <div class="theme">
+                Theme
+            </div>
+        </nav>
+        <section class="weather">
+            <header>
+                <div class="header-1">
+                    <h2 class="date">30 Jan 026</h2>
+                    <h1>Friday, 2:00pm</h1>
+                    <h3>Ahmedabad, India</h3>
+                </div>
+                <div class="header-2">
+                    <h2>20 °C</h2>
+                    <h3 id="weather">cloudy</h3>
+                    <h3 id="Precipitation">Precipitation: 10%</h3>
+                    <h3 id="Humidity">Humidity: 45%</h3>
+                    <h3 id="wind">Wind: 8 km/h</h3>
+                    
+                    
+                </div>
+
+            </header>
+        </section>
+        <section class="allElems">
+            <div class="todo elem" id="0">
+                <img src="https://i.pinimg.com/1200x/52/f0/ed/52f0edec93a0703f78db6ad29eece3f6.jpg" alt="">
+               <h3> Todo</h3>
+            </div>
+            <div class="daily elem" id="1">
+                <img src="https://i.pinimg.com/736x/45/55/4d/45554d41a6ab9a34554dffa09807d064.jpg" alt="">
+               <h3> Daily planner</h3>
+            </div>
+            <div class="moti elem" id="2">
+                <img src="https://i.pinimg.com/736x/4f/66/94/4f6694efbbe1c6aa148385b5378c9b48.jpg" alt="">
+               <h3> Motivation</h3>
+            </div>
+            <div class="pomo elem" id="3">
+                <img src="https://i.pinimg.com/736x/35/e9/fe/35e9fe1340b36fd0a1073cdbba03cb35.jpg" alt="">
+                <h3>Pomodoro timer</h3>
+            </div>
+            <div class="daily elem" id="4">
+                <img src="https://i.pinimg.com/736x/0e/56/0d/0e560de68bf5721f3cc044ff7e37801c.jpg" alt="">
+               <h3>Daily Goals</h3>
+            </div>
+        </section>
+        <section class="fullelem todo-fullPage">
+            <button class="back" id = '0'>
+                <i class="ri-close-large-line"></i>
+            </button>
+            <h2>Your persnalised Task list</h2>
+            <div class="todo-con">
+                <div class="addtask">
+                    <form action="">
+                        <input id="user" type="text" placeholder="Add Task" required>
+                        <textarea name="Enter Details" id=""></textarea>
+                        <div class="markimp">
+                            <input type="checkbox" name="" id="checkbox">
+                            <label for="checkbox">Mark as important</label>
+                        </div>
+                        <button type="submit">Add Task</button>
+                    </form>
+                </div>
+                <div class="alltask">
+                    
+                    
+                    
+                </div>
+            </div>
+        </section>
+         <section class="fullelem daily-fullPage">
+            <button class="back" id = '1'>
+                <i class="ri-close-large-line"></i>
+            </button>
+            <h2>Plan Your Day To More Productive.</h2>
+            <div class="Day-planner">
+            </div>
+        </section>
+         <section class="fullelem Motivation-fullPage">
+            <button class="back" id = '2'>
+                <i class="ri-close-large-line"></i>
+            </button>
+            <h2>Motivation</h2>
+            <div class="mot-con">
+                <div class="mot">
+                    <div class="motwrap">
+                        <img src="./icons8-get-quote-96.png" alt="">
+                        <div class="mot1">
+                            <h4>Motivational Quotes</h4>
+                        </div>
+                        <div class="mot2">
+                            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem architecto, beatae iusto voluptatum soluta fugit?</h4>
+                        </div>
+                        <div class="mot3">
+                            <h4>Yash Darji</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <section class="fullelem Pomodoro-fullPage">
+            <button class="back" id="3">
+                <i class="ri-close-large-line"></i>
+            </button>
+            <h2>Study With Me!</h2>
+            <h4>Work Session!</h4>
+            <div class="pomo-timer">
+                <h2>25:00</h2>
+                <button class="start">Start</button>
+                 <button class="stop">Stop</button>
+                  <button class="reset">Reset</button>
+            </div>
+        </section>
+         <section class="fullelem dailyGoals-fullPage">
+            <button class="back" id = '4'>
+                <i class="ri-close-large-line"></i>
+            </button>
+            <h3>Daily Goals</h3>
+            <div class="daily">
+                <div class="input">
+                    <form action="">
+                        <input type="text" id="goalInput" placeholder="Enter your daily goal" required>
+                    <button type="submit" id="addGoalButton">Add</button>
+                    </form>
+                </div>
+                <div class="list">
+                    
+                </div>
+                <div class="show">
+                    <h2>Your today's work</h2>
+                    <div class="goals-list">
+                        <h4>0%</h4>
+                        <div class="inc"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

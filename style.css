@@ -1,0 +1,809 @@
+:root{
+    --pri:#a78d78;
+    --sec:#6e473b;
+    --tri:#291c0e;
+    --tri1:#cb9153;
+    --green:rgb(39, 205, 39);
+    --blue:rgb(82, 82, 231);
+    --white:white;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--sec);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--pri);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--tri1);
+}
+@font-face {
+    font-family: reguler;
+    src: url(./fonts/SuisseIntl-Regular.ttf);
+}
+@font-face {
+    font-family: headline;
+    src: url(./fonts/Rejouice-Headline.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    color: var(--white);
+ 
+}
+
+
+#main{
+    min-height: 100vh;       
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--tri);
+    font-family: reguler;
+    padding: 0.5rem;
+    gap: 1rem;
+    overflow-x: hidden;
+}
+
+
+nav{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: var(--sec);
+    padding: 0.5rem 1rem; 
+}
+nav h1{
+    font-size: 4vh;
+}
+nav i{
+    font-size: 4vh;
+}
+nav .theme{
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    cursor: pointer;
+    color: var(--tri);
+}
+nav .theme:active{
+    scale: 0.90;
+}
+nav .theme:hover{
+    cursor: pointer;
+}
+section.weather{
+    width: 100%;
+    height: 40vh;
+    border-radius: 1rem;
+    background: url('https://images.unsplash.com/photo-1717361281130-f10a587180a2?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-color: var(--sec);
+    padding: 1rem;
+}
+.weather header{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.weather header .header-1 h1{
+    font-size: 9vh;
+    font-weight: 900;
+}
+.weather header .header-1 h2{
+    font-size: 7vh;
+    font-weight: 500;
+}
+.weather header .header-1 h3{
+    font-size: 4vh;
+    font-weight: 500;
+}
+.weather header .header-2 h2{
+    font-size: 6vh;
+    
+}
+.weather header .header-2 #weather{
+    font-size: 5vh;
+    font-weight: 500;
+    margin-bottom: 4vh;
+}
+.weather header .header-2 h3{
+    font-size: 3vh;
+    font-weight: 500;
+}
+section.allElems{
+    width: 100%;
+    font-family: reguler;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.2rem;
+}
+
+.elem{
+    background-color: #926153;
+    border-radius: 1rem;
+    width: 18vw;
+    height: 40vh;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, blue, alpha);
+}
+
+.elem img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+
+.elem img:hover{
+    transform: scale(1.2);
+}
+
+.elem:active{
+    transform: scale(0.97);
+}
+
+.elem h3{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    font-weight: 200;
+}
+
+
+.fullelem{
+    position: fixed;       
+    inset: 0;              
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    display: none;
+    background-color: var(--tri);
+    overflow: hidden;      
+    z-index: 999;
+    font-size: 5vw;
+}
+.back{
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    background-color: red;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+}
+.back:active{
+    scale: 0.95;
+}
+
+.todo-fullPage h2{
+    font-size:x-large;
+}
+.todo-fullPage .todo-con{
+    height: 80%;
+    width: 100%;
+    margin-top: 8vh;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.todo-fullPage .todo-con .addtask{
+    width: 33%;
+    height: 100%;
+     background-color: var(--sec);
+     border-radius: 1rem;
+}
+.todo-fullPage .todo-con .alltask{
+    width: 65%;
+    height: 100%;
+     background-color: var(--sec);
+     border-radius: 1rem;
+}
+.todo-fullPage .todo-con .addtask form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 2rem;
+
+
+}
+.todo-fullPage .todo-con .addtask form  #user{
+    padding: 2vh 2vh;
+    width: 100%;
+    font-size: large;
+    border-radius: 1rem;
+    background-color: var(--tri);
+    border: none;
+    color: var(--white);
+    outline: none;
+}
+.todo-fullPage .todo-con .addtask form textarea{
+    padding: 1vw 2vw;
+    width: 100%;
+    height:33vh;
+    font-size: large;
+    border-radius: 1rem;
+    background-color: var(--tri);
+    border: none;
+    color: var(--white);
+    outline: none;
+    resize: none;
+    overflow: auto;
+}
+.todo-fullPage .todo-con .addtask form button{
+    padding: 1vw 2vw;
+    width: 100%;
+    font-size: large;
+    font-weight: 800;
+    border-radius: 1rem;
+    background-color: var(--pri);
+    border: none;
+    color: var(--white);
+    outline: none;
+    transition: all 0.5s ease-in-out;
+}
+.todo-fullPage .todo-con .addtask form button:active{
+    scale: 0.90;
+    
+}
+.todo-fullPage .todo-con .addtask form button:hover{
+    cursor: pointer;
+}
+.todo-fullPage .todo-con .alltask{
+    width: 65%;
+    background-color: var(--sec);
+    height: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    overflow: auto;
+    font-size: large;
+}    
+.task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--tri1);
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 1rem;
+
+}
+.task button{
+    padding: 1vw 2vw;;
+    background-color: green;
+    border-radius: 1rem;
+    border: none;
+    color: var(--white);
+    outline: none;
+    transition: all 0.5s ease-in-out;
+}
+.task button:active{
+    scale: 0.90;
+}
+.markimp{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size:small;
+}
+.task h5{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+.task h5 span{
+    color: var(--white);
+    background-color: red;
+    padding: 0.5vh 0.7vh;
+    font-size:7px;
+    border-radius: 1rem;
+    
+}
+.task h5 span.true {
+    display: inline-block;
+}
+
+.task h5 span.false {
+    display: none;
+}
+.daily-fullPage h2{
+    font-size:x-large;
+}
+.daily-fullPage .Day-planner{
+    width: 100%;
+    height: 80%;
+    margin-top: 6vh;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--sec);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow: auto;
+    
+}
+.daily-fullPage .Day-planner .Day-planner-time{
+    width: 49%;
+    display: flex;
+    color: var(--white);
+    margin-bottom: 1rem;
+    position: relative;
+}
+.daily-fullPage .Day-planner .Day-planner-time input{
+    background-color: var(--tri);
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 2rem 2rem;
+    padding-top: 2.5rem;
+     color: var(--white);
+     border-radius: 1rem;
+     font-size: medium;
+     font-size: x-large;
+}
+.daily-fullPage .Day-planner .Day-planner-time p{
+    font-size:small;
+    position: absolute;
+    top: 10%;
+    left:2%;
+    color: var(--tri1)
+}
+.Motivation-fullPage h2{
+    font-size:4vh;
+    margin-bottom: 5vh;
+}
+.Motivation-fullPage .mot-con{
+    
+   height: 90%;
+   width: 100%;
+display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   padding: 1rem;
+}
+.Motivation-fullPage .mot-con .mot{
+    height: 50%;
+    width: 45%;
+    
+    border-radius: 1rem
+}
+.Motivation-fullPage .mot-con .mot::after{
+    content: '';
+    height: 50%;
+    width: 40%;
+    scale: 1.1;
+    border-radius: 1rem;
+    z-index: 8;
+    background-color: var(--pri);
+    filter: blur(150px);
+    position: absolute;
+}
+.Motivation-fullPage .mot-con .mot .motwrap{
+    z-index: 10;
+    position: absolute;
+    border-radius: 1rem;
+    
+    width: 40%;
+    padding: 1rem;
+    background-color: var(--tri1);
+}
+.Motivation-fullPage .mot-con .mot .motwrap img{
+    position: absolute;
+    right: 10%;
+    opacity: 0.3;
+}
+.Motivation-fullPage .mot-con .mot .motwrap .mot1{
+   
+    margin-top: 0.2rem;
+    display: flex;
+    justify-content: flex-start;
+    
+}
+.Motivation-fullPage .mot-con .mot .motwrap .mot1 h4{
+    font-size: large;
+     padding: 30px;
+    background-color: var(--tri);
+    border-radius: 1rem;
+    width: fit-content;
+    color:var(--tri1);
+    text-align: left;
+
+}
+.Motivation-fullPage .mot-con .mot .motwrap .mot2{
+    padding: 20px;
+    margin-top: 20px;
+}
+.Motivation-fullPage .mot-con .mot .motwrap .mot2 h4{
+    font-size:40px;
+    color: var(--tri);
+}
+.Motivation-fullPage .mot-con .mot .motwrap .mot3{
+   
+    margin-top: 0.2rem;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.Motivation-fullPage .mot-con .mot .motwrap .mot3 h4{
+    font-size: large;
+     padding: 30px;
+    background-color: var(--tri);
+    border-radius: 1rem;
+    width: fit-content;
+    color:var(--tri1);
+    text-align: right;
+
+}
+.Pomodoro-fullPage h2{
+        font-size:6vh;
+
+}
+.Pomodoro-fullPage .pomo-timer {
+    width: 100%;
+    
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+.Pomodoro-fullPage .pomo-timer h2 {
+    font-size: 15vh;
+
+}
+.Pomodoro-fullPage .pomo-timer button{
+    padding: 1rem 1.6rem;
+    margin: 1rem;
+    font-size:x-large;
+    border-radius: 1rem;
+    background-color: var(--pri);
+    border: none;
+    color: black;
+    outline: none;
+
+
+}
+.Pomodoro-fullPage .pomo-timer button:active{
+    scale: 0.90;
+}
+.Pomodoro-fullPage .pomo-timer button:hover{
+    cursor: pointer;
+}
+
+.Pomodoro-fullPage  h4{
+    font-size:4vh;
+    margin-top: 2rem;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    padding: 1rem 1.5rem;
+    background-color: var(--green);
+    border-radius: 1rem;
+}
+.dailyGoals-fullPage h3{
+    font-size:6vh;
+}
+.dailyGoals-fullPage .daily{
+    height: 80%;
+    width: 100%;
+    margin-top: 6vh;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--sec);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}   
+.dailyGoals-fullPage .daily .input{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    align-items: center;
+
+}
+.dailyGoals-fullPage .daily .input form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.dailyGoals-fullPage .daily .input input{
+    width: 80%;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    background-color: var(--tri);
+    color: var(--white);
+    font-size: large;
+}
+.dailyGoals-fullPage .daily .input button{
+    width: 10%;
+    padding: 1rem 0.5rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    background-color: var(--tri1);
+    color: var(--tri);
+    font-size: large;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+.dailyGoals-fullPage .daily .input button:active{
+    scale: 0.90;
+}
+.dailyGoals-fullPage .daily .list{
+    height: 70%;
+    width: 100%;
+    background-color: var(--pri);
+    margin-top: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+.dailyGoals-fullPage .daily .show{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+    height: 15%;
+}
+.dailyGoals-fullPage .daily .show h2{
+    font-size: x-large;
+}
+.dailyGoals-fullPage .daily .show .goals-list{
+    height: 100%;
+    width: 85%;
+    border: 2px solid var(--tri1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+.dailyGoals-fullPage .daily .show .goals-list .inc{
+    height: 100%;
+    width: 0%;
+    background-color: var(--green);
+    position: absolute;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+.dailyGoals-fullPage .daily .show .goals-list h4{
+    font-size: large;
+    z-index: 10;
+    position: absolute;
+    color: var(--white);
+    font-weight: bold;
+
+}
+.goal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--tri1);
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 1rem;
+
+}
+.goal h5{
+    font-size: x-large;
+}
+
+.goal button{
+    padding: 2vw 2.5vw;;
+    background-color: green;
+    border-radius: 1rem;
+    border: none;
+    color: var(--white);
+    outline: none;
+    transition: all 0.5s ease-in-out;
+}
+.goal button:active{
+    scale: 0.90;
+}
+@media (min-width:700px) and (max-width:1090px){
+    #main{
+        gap: 1.5rem;
+        padding: 1.2rem;
+    }
+
+    section.allElems .elem{
+        width: 50vw;
+    }
+    section.fullelem{
+        font-size: 7vw;
+        height: auto;
+        min-height: 100vh;
+    }
+    .Motivation-fullPage .mot-con .mot{
+        width: 70%;
+    }
+    .Motivation-fullPage .mot-con .mot::after{
+        width: 70%;
+    }
+    .Motivation-fullPage .mot-con .mot .motwrap{
+        width: 70%;
+    }
+    
+}
+
+
+@media (max-width:700px){
+    #main{
+        gap: 1.5rem;
+        padding: 1.2rem;
+    }
+    .weather header .header-1 h1{
+        font-size: 5vh;
+    }
+    .weather header .header-1 h2{
+        font-size: 3vh;
+    }
+    .weather header .header-2 h2{
+        font-size: 4vh;
+    }
+    .weather header .header-2 h3{
+        font-size: 2vh;
+    }
+    .weather header .header-1 h3{
+        font-size: 2vh;
+    
+    }
+    .weather header .header-2 #weather{
+        font-size: 3.6vh;
+    }
+    section.allElems .elem{
+        width: 90vw;
+    }
+    section.fullelem{
+        font-size: 7vw;
+         height: auto;
+        min-height: 100vh;
+    }
+    .todo-fullPage .todo-con{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .todo-fullPage .todo-con .addtask{
+        width: 100%;
+        height: 65%;
+    }
+     .todo-fullPage .todo-con .addtask form textarea{
+        height: 20vh;
+     }
+        .todo-fullPage .todo-con .alltask{
+            width: 100%;
+            height: 47%;
+        }
+        
+        .task button{
+            padding:3vw 2vw;
+        }
+
+    
+    .daily-fullPage .Day-planner .Day-planner-time{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .daily-fullPage h2{
+        font-size: large;
+    }
+    .Motivation-fullPage .mot-con{
+        width: 100%;
+        justify-content: center;
+    }
+    .Motivation-fullPage .mot-con .mot .motwrap .mot2 h4{
+        font-size:30px;
+    }
+    .Motivation-fullPage .mot-con .mot{
+        width: 120%;
+        
+    }
+    .Motivation-fullPage .mot-con .mot::after{
+        width: 90%;
+    }
+    .Motivation-fullPage .mot-con .mot .motwrap{
+        width: 90%;
+        font-size: small;
+    }
+    .Pomodoro-fullPage h2{
+        font-size: 4vh;
+    }
+    .Pomodoro-fullPage .pomo-timer h2{
+        font-size: 9vh;
+    }
+    .Pomodoro-fullPage .pomo-timer button{
+        padding:0.5rem 1rem;
+    }
+    .Pomodoro-fullPage  h4{
+        font-size:3vh;
+        padding: 0.6rem 0.8rem;
+    }
+    .dailyGoals-fullPage h3{
+        font-size:3vh;
+    }
+    .dailyGoals-fullPage .daily .input button{
+        width: 20%;
+    }
+    .dailyGoals-fullPage .daily .show{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .dailyGoals-fullPage .daily .show h2{
+        font-size: large;
+    }
+    .dailyGoals-fullPage .daily .show .goals-list{
+        width: 100%;
+        height: 110%;
+        padding: 1.3rem 0;
+    }
+    
+    .weather header{
+        padding: 0.2rem;
+    }
+    nav h1{
+        font-size: 3vh;
+    }
+    nav i{
+        font-size: 2vh;
+    }
+}
